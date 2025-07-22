@@ -4,6 +4,7 @@ import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import prettierConfig from 'eslint-config-prettier';
 import importHelpers from 'eslint-plugin-import-helpers';
+import jest from 'eslint-plugin-jest';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,6 +13,7 @@ const compat = new FlatCompat({
   resolvePluginsRelativeTo: __dirname,
 });
 
+/** @type {import('eslint').Linter.FlatConfig[]} */
 // eslint-disable-next-line import/no-anonymous-default-export
 export default [
   {
@@ -19,6 +21,16 @@ export default [
   },
   ...compat.extends('next/core-web-vitals'),
   js.configs.recommended,
+
+  {
+    ...jest.configs['flat/recommended'],
+    files: ['**/*.test.js', '**/*.test.jsx', '**/*.test.ts', '**/*.test.tsx'],
+    rules: {
+      ...jest.configs['flat/recommended'].rules,
+      'jest/expect-expect': 'off',
+    },
+  },
+
   {
     files: ['src/**/*.{js,jsx,ts,tsx}'],
     plugins: {
