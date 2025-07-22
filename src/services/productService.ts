@@ -1,5 +1,5 @@
-import { Product } from "@/types/product";
 import api from "@/lib/api";
+import { Product } from "@/types/product";
 
 const PRODUCTS_PATH = "/products";
 
