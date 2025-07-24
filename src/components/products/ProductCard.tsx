@@ -25,7 +25,7 @@ type ProductCardProps = {
 
 export const ProductCard = ({
   product,
-  isAdminView = true,
+  isAdminView = false,
 }: ProductCardProps) => {
   const [isFavorited, setIsFavorited] = useState(false);
   const [isPending, startTransition] = useTransition();
