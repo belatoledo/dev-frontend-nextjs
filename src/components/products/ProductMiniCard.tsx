@@ -52,9 +52,9 @@ export const ProductMiniCard = ({ products }: ProductsMiniCardProps) => {
         products.map((product) => (
           <Card
             key={product.id}
-            className="flex flex-col sm:flex-row items-center sm:items-start rounded-lg border p-4 shadow-sm"
+            className="grid grid-cols-3 gap-2 rounded-lg border p-4 shadow-sm"
           >
-            <div className="w-full sm:w-1/4 flex justify-center sm:justify-start mb-4 sm:mb-0 sm:mr-4">
+            <div className="w-full flex justify-center mb-0 mr-4">
               <Image
                 src={product.image}
                 alt={product.title}
@@ -63,9 +63,8 @@ export const ProductMiniCard = ({ products }: ProductsMiniCardProps) => {
                 className="rounded-md object-contain"
               />
             </div>
-
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left flex-grow sm:w-2/4">
-              <h3 className="font-semibold text-lg truncate max-w-full sm:max-w-[200px]">
+            <div className="w-[190px] flex flex-col justify-center text-left flex-grow">
+              <h3 className="font-semibold text-lg truncate w-full">
                 {product.title}
               </h3>
               <p className="text-sm text-gray-600">{product.category}</p>
@@ -73,8 +72,7 @@ export const ProductMiniCard = ({ products }: ProductsMiniCardProps) => {
                 {formatCurrency(product.price)}
               </p>
             </div>
-
-            <div className="flex flex-row sm:flex-col items-center sm:items-end justify-center gap-2 mt-4 sm:mt-0 sm:ml-auto sm:w-1/4">
+            <div className="flex flex-col items-end justify-start gap-2 mt-0 ml-auto">
               <Button
                 asChild
                 aria-label={`Visualizar ${product.title}`}
@@ -86,6 +84,7 @@ export const ProductMiniCard = ({ products }: ProductsMiniCardProps) => {
                   <Eye className="h-5 w-5 text-cyan-500" />
                 </Link>
               </Button>
+
               <Button
                 aria-label={`Editar ${product.title}`}
                 size="icon"
