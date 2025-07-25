@@ -45,25 +45,24 @@ export default function ProductsManagementPage() {
       </div>
 
       <div>
-        <div className="hidden lg:block">
-          <ProductsTable
-            products={currentProducts}
-            onProductDeleted={deleteProduct}
-          />
-        </div>
-
         <div className="lg:hidden">
           <ProductMiniCard
             products={currentProducts}
             onProductDeleted={deleteProduct}
           />
         </div>
+        <div className="hidden lg:block">
+          <ProductsTable
+            products={currentProducts}
+            onProductDeleted={deleteProduct}
+          />
 
-        <PaginationControls
-          currentPage={currentPage}
-          totalPages={totalPages}
-          onPageChange={setCurrentPage}
-        />
+          <PaginationControls
+            currentPage={currentPage}
+            totalPages={totalPages}
+            onPageChange={setCurrentPage}
+          />
+        </div>
       </div>
     </main>
   );
