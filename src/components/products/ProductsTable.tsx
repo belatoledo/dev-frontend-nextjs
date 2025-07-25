@@ -22,16 +22,17 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { useProducts } from '@/context/productContext';
+import { useProductsContext } from '@/context/productContext';
 import { formatCurrency } from '@/lib/utils';
 import { Product } from '@/types/product';
 
 type ProductsTableProps = {
   products: Product[];
+  onProductDeleted: (productId: number) => void;
 };
 
 export const ProductsTable = ({ products }: ProductsTableProps) => {
-  const { deleteProduct } = useProducts();
+  const { deleteProduct } = useProductsContext();
   const [isPending, startTransition] = useTransition();
 
   const handleEdit = (id: number) => {
@@ -53,12 +54,12 @@ export const ProductsTable = ({ products }: ProductsTableProps) => {
   };
 
   return (
-    <div className="rounded-md border">
+    <div className="sm:hidden lg:block rounded-md border">
       <Table>
         <TableHeader>
           <TableRow>
             <TableHead className="w-[80px]">Imagem</TableHead>
-            <TableHead>Título</TableHead>
+            <TableHead>Nome do produto</TableHead>
             <TableHead>Categoria</TableHead>
             <TableHead className="text-right">Preço</TableHead>
             <TableHead className="text-center w-[120px]">Ações</TableHead>
