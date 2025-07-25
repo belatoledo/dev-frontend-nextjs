@@ -21,7 +21,7 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { useProducts } from '@/context/useProduct';
+import { useProducts } from '@/context/productContext';
 import { formatCurrency } from '@/lib/utils';
 import { Product } from '@/types/product';
 

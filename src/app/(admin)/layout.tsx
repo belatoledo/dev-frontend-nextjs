@@ -2,7 +2,7 @@ import React from 'react';
 
 import { AdminHeader } from '@/components/layout/header/AdminHeader';
 import { Sidebar } from '@/components/layout/sidebar/Sidebar';
-import { ProductsProvider } from '@/context/useProduct';
+import { ProductsProvider } from '@/context/productContext';
 
 export default function AdminLayout({
   children,

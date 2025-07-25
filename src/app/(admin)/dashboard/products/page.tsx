@@ -2,22 +2,18 @@
 
 import Link from 'next/link';
 
-import { LoaderCircle, PlusCircle } from 'lucide-react';
+import { PlusCircle } from 'lucide-react';
 
 import { ProductsTable } from '@/components/products/ProductsTable';
+import { LoadingSpinner } from '@/components/shared/LoadingSpinner';
 import { Button } from '@/components/ui/button';
-import { useProducts } from '@/context/useProduct';
+import { useProducts } from '@/context/productContext';
 
 export default function ProductsManagementPage() {
   const { products, isLoading } = useProducts();
 
   if (isLoading) {
-    return (
-      <div className="flex flex-col items-center justify-center mx-auto p-8">
-        <LoaderCircle className="mb-4 h-8 w-8 animate-spin" />
-        Carregando produtos...
-      </div>
-    );
+    return <LoadingSpinner text="Carregando produtos..." />;
   }
 
   return (
