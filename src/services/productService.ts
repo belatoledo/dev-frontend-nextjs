@@ -1,7 +1,7 @@
 import api from '@/lib/api';
 import { Product } from '@/types/product';
 
-const PRODUCTS_PATH = '/products';
+const PRODUCTS_PATH = 'products';
 
 export const getProducts = (): Promise<Product[]> => {
   return api<Product[]>(PRODUCTS_PATH);
