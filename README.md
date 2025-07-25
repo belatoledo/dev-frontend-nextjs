@@ -40,16 +40,16 @@ Essas tecnologias foram aliadas a arquitetura de componentização por tipo de f
 As principais funcionalidades da Diamond Management:
 
 - **HomePage com animações:** Para dar aquele tcham!
-- **Tela de login:** Autenticação simulada para proteger nossa dashboard de milhões.
+- **Tela de login:** Autenticação simulada para proteger nossa dashboard de milhões. ✨
 - **Minha conta:** Um formulário sem interações para simular os dados de cadastro usuário logado.
-- **PAGINA DE PRODUTOS:** o coração da aplicação!
+- **PAGINA DE PRODUTOS:** o 💗 da aplicação!
   Nela você vai encontrar:
   * **Listagem de produtos:** A lista dos seus produtos cadastrados com imagem, nome, categoria e botões de ação para gerenciamento.
   * **Visualização detalhada de produto:** Quer mais informação? TEMOS! Página de detalhes para cada produto.
-  * **Adicionar novo produto:** Chegou produtos novos na sua loja? É só colocar na lista com nosso formulário!.
+  * **Adicionar novo produto:** Chegou produtos novos na sua loja? É só colocar na lista com nosso formulário!. 🆕
   * **Editar produto existente:** Não tem tempo ruim com esse formulário... você poder trocar preço, imagem, nome e mais.
   * **Excluir produto:** Saiu de estoque? Pode remover da lista e tem até alerta de confirmação para maior segurança.
-- **Cadastro de cupons:** Uma página para cadastrar aquele descontinho para os seus produtos e fidelizar o cliente!
+- **Cadastro de cupons:** Uma página para cadastrar aquele descontinho para os seus produtos e fidelizar o cliente! 🏷️
 - **Modo visualização:**: Aqui você vê como ficam seus produtos do ponto de vista do seu cliente. Dá até pra favoritar!
 
 💡 **Observações**: 
