@@ -12,7 +12,7 @@ export const SidebarNav = () => {
   const pathname = usePathname();
 
   const navItems = [
-    { href: '/account', label: 'Minha conta', icon: User },
+    { href: '/dashboard/account', label: 'Minha conta', icon: User },
     { href: '/dashboard/products', label: 'Gerenciar produtos', icon: Package },
     { href: '/dashboard/discounts', label: 'Cadastrar cupons', icon: Tags },
     { href: '/products', label: 'Ver loja', icon: Eye },
