@@ -62,7 +62,7 @@ As principais funcionalidades da Diamond Management:
 
 Para rodar o projeto localmente, certifique-se de ter os seguintes softwares instalados:
 
-  * **Node.js:** Versão 18 ou superior (O projeto foi testado com Node.js v22).
+  * **Node.js:** Versão 18.18.0 ou superior (O projeto foi testado com Node.js v22).
   * **npm**: Gerenciador de pacotes.
 
 -----
