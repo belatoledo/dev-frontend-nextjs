@@ -4,32 +4,32 @@
 
 <p align="center">
   <a href="#-sobre">Sobre</a> •
-  <a href="#-tecnologias">Tecnologias</a> • 
+  <a href="#-tecnologias-utilizadas">Tecnologias</a> • 
   <a href="#-funcionalidades">Funcionalidades</a> •
- <a href="#pré-requisitos">Pré-requisitos</a> • 
-  <a href="#pré-requisitos">Instalaçaõ</a> •
+ <a href="#-pré-requisitos">Pré-requisitos</a> • 
+  <a href="#rodando-o-projeto">Rodando o projeto</a> •
  <a href="#-links">Links</a> • 
- <a href="#autor">Autor</a>
+ <a href="#-autor">Autor</a>
 </p>
 
-### 💎 Sobre
+## 💎 Sobre
 O projeto Diamond Management foi desenvolvido como parte de um **desafio técnico proposto pela MaxUp Consultoria**. Trata-se de uma aplicação web em que o usuário poderá gerenciar uma lista dos produtos disponíveis em um **painel administrativo**. Na página principal é possível ver uma tabela com todos os produtos listados onde é possível realizar ações de visualizar, editar e deletar cada um deles, além de criar novos produtos. A aplicação foi desenvolvida com **Next.js 15 (App Router)** e **TypeScript**, utilizando a **FakeStore API** para simulação do gerenciamento de dados.
 
 -----
 
-## 💻 Tecnologias Utilizadas
+## 🔧 Tecnologias Utilizadas
 
 As seguintes ferramentas foram usadas na construção do projeto pensando em **desempenho**, **escalabilidade** e uma **experiência do usuário**:
 
 - **[Next.js](https://nextjs.org/) + [TypeScript](https://www.typescriptlang.org/) + [Jest](https://jestjs.io/)**: Garantindo robustez e segurança pra o código, além de diferentes arquiteturas, hooks, otimizações, testes unitários e outros recursos.
-- * **[Tailwind CSS](https://tailwindcss.com/) + [ShadcnUI](https://ui.shadcn.com/) + [Lucide Icons](https://lucide.dev/icons/)**: Componentização reutilizável, ícones modernos e utilitários para tornar o desenvolvimento ágil, responsivo, acessível e de fácil manutenção.
+- **[Tailwind CSS](https://tailwindcss.com/) + [ShadcnUI](https://ui.shadcn.com/) + [Lucide Icons](https://lucide.dev/icons/)**: Componentização reutilizável, ícones modernos e utilitários para tornar o desenvolvimento ágil, responsivo, acessível e de fácil manutenção.
 - **[FakeStore API](https://fakestoreapi.com/):** **FakeStore API** – API pública utilizada para simular a obtenção e manipulação de dados de produtos.
 
 Essas tecnologias foram aliadas a arquitetura de componentização por tipo de feature, uma abordagem mobile-first com preocupação com performance, acessibilidade e design responsivo, commits semênticos, boas práticas de código com e princípios de desenvolvimento de software para trazer uma aplicação **performática**, **escalável** e **responsiva**.
 
 -----
 
-##  Funcionalidades
+## 💻 Funcionalidades
 
 As principais funcionalidades da Diamond Management:
 
@@ -46,7 +46,7 @@ As principais funcionalidades da Diamond Management:
 - **Cadastro de cupons:** Uma página para cadastrar aquele descontinho para os seus produtos e fidelizar o cliente!
 - **Modo visualização:**: Aqui você vê como ficam seus produtos do ponto de vista do seu cliente. Dá até pra favoritar!
 
-💡 **Observações: 
+💡 **Observações**: 
 - A **FakeStore API** não armazena dados de forma persistente, dessa forma os dados de criação e edição são persistidos apenas na sua sessão via `localStorage` e serão perdidos ao limpar o cache do navegador. Devido a essa limitação também não é possível atualizar a lista de produtos ou favoritá-los no modo visualização.
 - O cadastro de cupons é apenas um mini CRUD utilizando um hook customizado para fins didáticos.
 
@@ -61,7 +61,8 @@ Para rodar o projeto localmente, certifique-se de ter os seguintes softwares ins
 
 -----
 
-## ⚙️ Instalação e Uso
+
+## Rodando o projeto
 
 Siga os passos abaixo para configurar e executar a aplicação em seu ambiente local:
 
@@ -126,4 +127,4 @@ node_modules/
 <a href="https://www.linkedin.com/in/izabela-toledo/">
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/61567726?v=4" width="100px;" alt=""/>
  <br />
- <sub><b>Izabela Toledo</b></sub></a> <a href="https://github.com/belatoledo">🚀</a>
+ <sub><b>Izabela Toledo</b></sub><a href="https://github.com/belatoledo">🚀</a>
