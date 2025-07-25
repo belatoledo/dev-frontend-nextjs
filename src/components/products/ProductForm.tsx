@@ -7,7 +7,6 @@ import { useRouter } from 'next/navigation';
 
 import { LoaderCircle } from 'lucide-react';
 import { toast } from 'sonner';
-import { z } from 'zod';
 
 import {
   createProductAction,

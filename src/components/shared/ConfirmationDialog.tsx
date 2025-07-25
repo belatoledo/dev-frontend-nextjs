@@ -33,10 +33,10 @@ export const ConfirmationDialog = ({
           variant="destructive"
           size="icon"
           disabled={isPending}
-          aria-label={`Excluir ${itemName}`}
+          aria-label={`Excluir item ${itemName}`}
           className="h-8 w-8"
         >
-          <Trash2 className="h-4 w-4" />
+          <Trash2 aria-hidden="true" className="h-4 w-4" />
         </Button>
       </AlertDialogTrigger>
       <AlertDialogContent>

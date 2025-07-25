@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 
-import { PlusCircle } from 'lucide-react';
+import { LoaderCircle, PlusCircle } from 'lucide-react';
 
 import { ProductsTable } from '@/components/products/ProductsTable';
 import { Button } from '@/components/ui/button';
@@ -12,7 +12,12 @@ export default function ProductsManagementPage() {
   const { products, isLoading } = useProducts();
 
   if (isLoading) {
-    return <div className="container mx-auto p-8">Carregando produtos...</div>;
+    return (
+      <div className="flex flex-col items-center justify-center mx-auto p-8">
+        <LoaderCircle className="mb-4 h-8 w-8 animate-spin" />
+        Carregando produtos...
+      </div>
+    );
   }
 
   return (
