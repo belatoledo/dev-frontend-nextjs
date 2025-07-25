@@ -35,7 +35,7 @@ export default function ProductsManagementPage() {
   return (
     <main className="container mx-auto pa-4">
       <div className="flex items-center justify-between mb-8">
-        <h1 className="text-3xl font-bold">Gerenciar Produtos</h1>
+        <h1 className="text-2xl lg:text-3xl font-bold">Gerenciar produtos</h1>
         <Button asChild>
           <Link href="/dashboard/products/new">
             <PlusCircle className="mr-2 h-4 w-4" />
@@ -56,13 +56,12 @@ export default function ProductsManagementPage() {
             products={currentProducts}
             onProductDeleted={deleteProduct}
           />
-
-          <PaginationControls
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={setCurrentPage}
-          />
-        </div>
+        </div>{' '}
+        <PaginationControls
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
       </div>
     </main>
   );

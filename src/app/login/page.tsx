@@ -11,7 +11,7 @@ export default function LoginPage() {
           alt="Diamantes azuis sobre uma superfície escura"
           fill
           priority
-          className="object-cover"
+          className="w-full h-auto object-cover"
         />
 
         <div className="absolute inset-0 bg-black/70 lg:bg-black/30" />
@@ -23,7 +23,7 @@ export default function LoginPage() {
           </p>
         </div>
       </div>
-      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center gap-6 p-4 bg-gray-900">
+      <div className="relative z-10 flex min-h-screen flex-col items-center justify-center gap-6 p-4 lg:bg-gray-900">
         <div className="flex flex-col items-center w-full max-w-md">
           <LoginForm />
           <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
