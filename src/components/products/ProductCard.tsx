@@ -21,6 +21,7 @@ import { ConfirmationDialog } from '../shared/ConfirmationDialog';
 type ProductCardProps = {
   product: Product;
   isAdminView?: boolean;
+  onProductDeleted?: (id: number) => void;
 };
 
 export const ProductCard = ({
