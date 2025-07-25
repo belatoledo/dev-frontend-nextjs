@@ -1,23 +1,39 @@
 'use client';
 
+import { useState } from 'react';
+
 import Link from 'next/link';
 
 import { PlusCircle } from 'lucide-react';
 
+import { ProductMiniCard } from '@/components/products/ProductMiniCard';
 import { ProductsTable } from '@/components/products/ProductsTable';
 import { LoadingSpinner } from '@/components/shared/LoadingSpinner';
+import { PaginationControls } from '@/components/shared/PaginationControls';
 import { Button } from '@/components/ui/button';
-import { useProducts } from '@/context/productContext';
+import { useProductsContext } from '@/context/productContext';
+
+const ITEMS_PER_PAGE = 7;
 
 export default function ProductsManagementPage() {
-  const { products, isLoading } = useProducts();
+  const { products, isLoading, deleteProduct } = useProductsContext();
+  const [currentPage, setCurrentPage] = useState(1);
+
+  const totalPages = Math.ceil(products.length / ITEMS_PER_PAGE);
+  const lastItemIndex = currentPage * ITEMS_PER_PAGE;
+  const firstItemIndex = lastItemIndex - ITEMS_PER_PAGE;
+  const currentProducts = products.slice(firstItemIndex, lastItemIndex);
 
   if (isLoading) {
-    return <LoadingSpinner text="Carregando produtos..." />;
+    return (
+      <div className="flex flex-1 items-center justify-center">
+        <LoadingSpinner size="lg" text="Carregando produtos..." />
+      </div>
+    );
   }
 
   return (
-    <main className="container mx-auto px-4 py-8">
+    <main className="container mx-auto pa-4">
       <div className="flex items-center justify-between mb-8">
         <h1 className="text-3xl font-bold">Gerenciar Produtos</h1>
         <Button asChild>
@@ -28,7 +44,27 @@ export default function ProductsManagementPage() {
         </Button>
       </div>
 
-      <ProductsTable products={products} />
+      <div>
+        <div className="hidden lg:block">
+          <ProductsTable
+            products={currentProducts}
+            onProductDeleted={deleteProduct}
+          />
+        </div>
+
+        <div className="lg:hidden">
+          <ProductMiniCard
+            products={currentProducts}
+            onProductDeleted={deleteProduct}
+          />
+        </div>
+
+        <PaginationControls
+          currentPage={currentPage}
+          totalPages={totalPages}
+          onPageChange={setCurrentPage}
+        />
+      </div>
     </main>
   );
 }
