@@ -7,15 +7,12 @@ import { ProductForm } from '@/components/products/ProductForm';
 import { Button } from '@/components/ui/button';
 import { getProductById } from '@/services/productService';
 
-type EditProductPageProps = {
-  params: { id: string };
-};
-
-export default async function EditProductPage(props: EditProductPageProps) {
-  const { params } = props;
+export default async function EditProductPage(props: any) {
+  const { id } = props.params;
 
   try {
-    const product = await getProductById(params.id);
+    const productId = props.params.id;
+    const product = await getProductById(productId);
 
     const initialData = {
       title: product.title,

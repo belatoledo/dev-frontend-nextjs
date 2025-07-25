@@ -8,17 +8,11 @@ import { Button } from '@/components/ui/button';
 import { formatCurrency } from '@/lib/utils';
 import { getProductById } from '@/services/productService';
 
-type ProductDetailPageProps = {
-  params: {
-    id: string;
-  };
-};
-
-export default async function ProductDetailPage({
-  params,
-}: ProductDetailPageProps) {
+export default async function ProductDetailPage(props: any) {
+  const { id } = props.params;
   try {
-    const product = await getProductById(params.id);
+    const productId = props.params.id;
+    const product = await getProductById(productId);
 
     return (
       <>
