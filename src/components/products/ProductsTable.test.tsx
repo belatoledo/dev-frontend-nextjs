@@ -1,4 +1,3 @@
-// src/components/products/ProductsTable.test.tsx
 import { toast } from 'sonner';
 
 import { Product } from '@/types/product';
@@ -16,6 +15,8 @@ jest.mock('@/actions/productActions', () => ({
   deleteProductAction: (id: number) => mockDeleteAction(id),
 }));
 
+const mockOnProductDeleted = jest.fn();
+
 jest.mock('sonner', () => ({
   toast: {
     success: jest.fn(),
@@ -23,8 +24,8 @@ jest.mock('sonner', () => ({
   },
 }));
 
-jest.mock('@/context/useProduct', () => ({
-  useProducts: () => ({
+jest.mock('@/context/productContext', () => ({
+  useProductsContext: () => ({
     deleteProduct: mockDeleteProductFromContext,
   }),
 }));
@@ -47,17 +48,29 @@ describe('Component: ProductsTable', () => {
   });
 
   it('should render an empty state when no products are provided', () => {
-    render(<ProductsTable products={[]} />);
+    render(
+      <ProductsTable products={[]} onProductDeleted={mockOnProductDeleted} />
+    );
     expect(screen.getByText('Nenhum produto encontrado.')).toBeInTheDocument();
   });
 
   it('should render product information correctly', () => {
-    render(<ProductsTable products={mockProducts} />);
+    render(
+      <ProductsTable
+        products={mockProducts}
+        onProductDeleted={mockOnProductDeleted}
+      />
+    );
     expect(screen.getByText('Produto Teste 1')).toBeInTheDocument();
   });
 
   it('should call editProductAction when the edit button is clicked', async () => {
-    render(<ProductsTable products={mockProducts} />);
+    render(
+      <ProductsTable
+        products={mockProducts}
+        onProductDeleted={mockOnProductDeleted}
+      />
+    );
     const editButton = screen.getByRole('button', { name: /editar/i });
     await userEvent.click(editButton);
     expect(mockEditAction).toHaveBeenCalledWith(mockProducts[0].id);
@@ -68,7 +81,12 @@ describe('Component: ProductsTable', () => {
       success: true,
       message: 'Produto deletado com sucesso.',
     });
-    render(<ProductsTable products={mockProducts} />);
+    render(
+      <ProductsTable
+        products={mockProducts}
+        onProductDeleted={mockOnProductDeleted}
+      />
+    );
 
     const deleteTrigger = screen.getByRole('button', { name: /excluir/i });
     await userEvent.click(deleteTrigger);

@@ -23,7 +23,7 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { useProducts } from '@/context/productContext';
+import { useProductsContext } from '@/context/productContext';
 import { productSchema, ProductFormData } from '@/lib/schemas';
 import { zodResolver } from '@hookform/resolvers/zod';
 
@@ -33,7 +33,7 @@ type ProductFormProps = {
 };
 
 export const ProductForm = ({ initialData, productId }: ProductFormProps) => {
-  const { addProduct, updateProduct } = useProducts();
+  const { addProduct, updateProduct } = useProductsContext();
   const [isPending, startTransition] = useTransition();
   const router = useRouter();
   const isEditMode = !!productId;

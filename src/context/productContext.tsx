@@ -84,10 +84,12 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export const useProducts = () => {
+export const useProductsContext = () => {
   const context = useContext(ProductsContext);
   if (!context) {
-    throw new Error('useProducts deve ser usado dentro de um ProductsProvider');
+    throw new Error(
+      'useProductsContext deve ser usado dentro de um ProductsProvider'
+    );
   }
   return context;
 };
