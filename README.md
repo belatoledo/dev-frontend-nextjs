@@ -1,14 +1,14 @@
 <h1 align="center"> DIAMOND MANAGEMENT</h1>
-<p align="center">
-  Next.js | TypeScript | Tailwind | Jest</p>
+<h4 align="center">
+  Next.js | TypeScript | Tailwind | Jest</h4>
 
 <p align="center">
   <a href="#-sobre">Sobre</a> •
   <a href="#-tecnologias-utilizadas">Tecnologias</a> • 
   <a href="#-funcionalidades">Funcionalidades</a> •
  <a href="#-pré-requisitos">Pré-requisitos</a> • 
-  <a href="#rodando-o-projeto">Rodando o projeto</a> •
- <a href="#-links">Links</a> • 
+  <a href="#-rodando-o-projeto">Rodando o projeto</a> •
+ <a href="#-link-do-deploy">Link do Deploy</a> • 
  <a href="#-autor">Autor</a>
 </p>
 
@@ -62,7 +62,7 @@ Para rodar o projeto localmente, certifique-se de ter os seguintes softwares ins
 -----
 
 
-## Rodando o projeto
+## 🎲 Rodando o projeto
 
 Siga os passos abaixo para configurar e executar a aplicação em seu ambiente local:
 
@@ -91,7 +91,13 @@ Siga os passos abaixo para configurar e executar a aplicação em seu ambiente l
 
     A aplicação estará disponível em `http://localhost:3000`.
 
-4.  **Build para produção:**
+    #### ⚠️ CREDENCIAIS PARA LOGIN:
+```
+    💌 email: admin@diamond.com
+    🗝️ senha: store123
+  ```
+
+5.  **Build para produção:**
 
     Para gerar uma build otimizada para produção:
 
@@ -115,10 +121,9 @@ node_modules/
 
 -----
 
-## 🌐 Links
+## 🌐 Link do Deploy
 
-  * **Repositório no GitHub:** [Acessar](https://github.com/belatoledo/dev-frontend-nextjs)
-  * **Deploy:** [Vercel](https://dev-frontend-nextjs-xi.vercel.app/)
+  * [Acesse na Vercel](https://dev-frontend-nextjs-xi.vercel.app/)
 
 -----
 
