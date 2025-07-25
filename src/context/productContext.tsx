@@ -14,7 +14,7 @@ import { Product } from '@/types/product';
 type ProductsContextType = {
   products: Product[];
   isLoading: boolean;
-  addProduct: (newProduct: Product) => void;
+  addProduct: (newProductData: Omit<Product, 'id' | 'rating'>) => void;
   updateProduct: (updatedProduct: Product) => void;
   deleteProduct: (productId: number) => void;
 };
@@ -31,16 +31,22 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
     const loadProducts = async () => {
       try {
         const storedProducts = localStorage.getItem('products');
+
         if (storedProducts) {
           setProducts(JSON.parse(storedProducts));
+          setIsLoading(false);
+        } else {
+          const apiProducts = await getProducts();
+          setProducts(apiProducts);
+          localStorage.setItem('products', JSON.stringify(apiProducts));
+          setIsLoading(false);
         }
-
-        const apiProducts = await getProducts();
-        setProducts(apiProducts);
-        localStorage.setItem('products', JSON.stringify(apiProducts));
       } catch (error) {
-        console.error('Falha ao carregar produtos', error);
-      } finally {
+        console.error(
+          'Falha ao carregar produtos (inicial ou do localStorage):',
+          error
+        );
+        setProducts([]);
         setIsLoading(false);
       }
     };
@@ -48,9 +54,13 @@ export const ProductsProvider = ({ children }: { children: ReactNode }) => {
     loadProducts();
   }, []);
 
-  const addProduct = (newProduct: Product) => {
-    const productWithId = { ...newProduct, id: newProduct.id || Date.now() };
-    const updatedProducts = [...products, productWithId];
+  const addProduct = (newProductData: Omit<Product, 'id' | 'rating'>) => {
+    const productWithId: Product = {
+      ...newProductData,
+      id: Date.now(),
+      rating: { rate: 0, count: 0 },
+    };
+    const updatedProducts = [productWithId, ...products];
     setProducts(updatedProducts);
     localStorage.setItem('products', JSON.stringify(updatedProducts));
   };
