@@ -28,7 +28,7 @@ export const PaginationControls = ({
       <div className="text-sm font-medium">
         Página {currentPage} de {totalPages}
       </div>
-      <div className="space-x-2">
+      <div className="flex items-center justify-center space-x-2">
         <Button
           variant="outline"
           size="sm"
