@@ -2,7 +2,7 @@
 <h4 align="center">
   Next.js | TypeScript | Tailwind | Jest</h4>
 
-<p align="center">
+  <p align="center">
   <a href="#-sobre">Sobre</a> •
   <a href="#-tecnologias-utilizadas">Tecnologias</a> • 
   <a href="#-funcionalidades">Funcionalidades</a> •
@@ -11,6 +11,12 @@
  <a href="#-link-do-deploy">Link do Deploy</a> • 
  <a href="#-autor">Autor</a>
 </p>
+
+<img width="1914" height="905" alt="image" src="https://github.com/user-attachments/assets/076465a7-4fb3-4f60-a59d-d04d432e29b9" />
+<img width="1916" height="905" alt="image" src="https://github.com/user-attachments/assets/df27270d-3727-4390-a736-6a6afb2b287b" />
+<img width="1916" height="907" alt="image" src="https://github.com/user-attachments/assets/c5fa0bba-f57d-43fe-8f32-4a3384bceac5" />
+<img width="1904" height="909" alt="image" src="https://github.com/user-attachments/assets/2f612399-ea7b-4a11-8971-414410a9957e" />
+
 
 ## 💎 Sobre
 O projeto Diamond Management foi desenvolvido como parte de um **desafio técnico proposto pela MaxUp Consultoria**. Trata-se de uma aplicação web em que o usuário poderá gerenciar uma lista dos produtos disponíveis em um **painel administrativo**. Na página principal é possível ver uma tabela com todos os produtos listados onde é possível realizar ações de visualizar, editar e deletar cada um deles, além de criar novos produtos. A aplicação foi desenvolvida com **Next.js 15 (App Router)** e **TypeScript**, utilizando a **FakeStore API** para simulação do gerenciamento de dados.
