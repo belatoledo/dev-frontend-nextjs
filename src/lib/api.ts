@@ -8,10 +8,11 @@ export class ApiError extends Error {
   }
 }
 
+// eslint-disable-next-line no-undef
 const api = async <T>(path: string, options?: RequestInit): Promise<T> => {
   const url = `${process.env.NEXT_PUBLIC_API_URL}${path}`;
   const response = await fetch(url, {
-    headers: { "Content-Type": "application/json" },
+    headers: { 'Content-Type': 'application/json' },
     ...options,
   });
 
