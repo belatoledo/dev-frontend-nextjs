@@ -57,7 +57,7 @@ export const LoginForm = () => {
     <Card className="w-full max-w-sm">
       <CardHeader>
         <Gem className="mx-auto h-8 w-8 text-cyan-500" />
-        <CardTitle className="text-2xl text-center">Bem vindo</CardTitle>
+        <CardTitle className="text-2xl text-center">Olá!</CardTitle>
         <CardDescription className="text-cyan-600 text-center">
           Entre com seu e-mail mais brilhante e senha para acessar o painel de
           gerenciamento.
