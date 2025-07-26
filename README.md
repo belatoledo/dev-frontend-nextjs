@@ -78,8 +78,17 @@ Siga os passos abaixo para configurar e executar a aplicação em seu ambiente l
     git clone https://github.com/belatoledo/dev-frontend-nextjs.git
     cd dev-frontend-nextjs
     ```
+2. **Abra o projeto**
+   * Na **raiz** do repositório crie o arquivo **.env.local**
+   * Copie a chave abaixo dentro do arquivo:
+       
+    ```
+   NEXT_PUBLIC_API_URL="https://fakestoreapi.com"
+    ```
 
-2.  **Instale as dependências:**
+   * Salve o arquivo
+   
+4. **Instale as dependências:**
 
     Com npm:
 
@@ -87,7 +96,7 @@ Siga os passos abaixo para configurar e executar a aplicação em seu ambiente l
     npm install
     ```
 
-3.  **Inicie o servidor de desenvolvimento:**
+5.  **Inicie o servidor de desenvolvimento:**
 
     Com npm:
 
